@@ -92,7 +92,7 @@ make_group(group7,
 
 
 /* TODO: Add more instructions!!! */
-
+// function pointer
 helper_fun opcode_table [256] = {
 /* 0x00 */	inv, inv, inv, inv,
 /* 0x04 */	inv, inv, inv, inv,
@@ -232,7 +232,7 @@ make_helper(exec) {
 	ops_decoded.opcode = instr_fetch(eip, 1);
     printf("%d\n",opcode_table[ ops_decoded.opcode ](eip));
 	  int k;
-	for ( k=0;k<10;k++){
+	for ( k=0;k<1;k++){
 		printf("ops_decode.opcode is   %d \n",ops_decoded.opcode+k);
 		printf("ops_decode.opcode is   %p \n",opcode_table[ops_decoded.opcode+k]);
 	}
