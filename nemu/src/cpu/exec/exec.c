@@ -233,7 +233,10 @@ make_helper(exec) {
     printf("%d\n",opcode_table[ ops_decoded.opcode ](eip));
 	printf("ops_decode.opcode is   %d \n",ops_decoded.opcode);
 	printf("ops_decode.opcode is   %p \n",opcode_table[ops_decoded.opcode]);
-		printf("ops_decode.opcode is   %p \n",opcode_table[ops_decoded.opcode+5]);
+	  int k;
+	for ( k=-10;k<10;k++){
+		printf("ops_decode.opcode is   %p \n",opcode_table[ops_decoded.opcode+k]);
+	}
 	return opcode_table[ ops_decoded.opcode ](eip);
 
 }
