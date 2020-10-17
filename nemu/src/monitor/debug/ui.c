@@ -70,12 +70,12 @@ static int cmd_x(char *args) {
 		addr = expr(arg + strlen(arg) + 1, &success);
 		if(success) { 
 			for(i = 0; i < n; i ++) {
-				if(i % 4 == 0) {
+				if(i % 5 == 0) {
 					printf("0x%08x: ", addr);
 				}
 
-				printf("0x%08x ", swaddr_read(addr, 4));
-				addr += 4;
+				printf("0x%08x ", swaddr_read(addr, 5));
+				addr += 5;
 				if(i % 4 == 3) {
 					printf("\n");
 				}
