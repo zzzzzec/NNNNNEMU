@@ -3,7 +3,7 @@
 
 #include "all-instr.h"
 
-typedef int (*helper_fun)(swaddr_t);
+typedef int     (*helper_fun)(swaddr_t);
 static make_helper(_2byte_esc);
 
 #define make_group(name, item0, item1, item2, item3, item4, item5, item6, item7) \
@@ -231,6 +231,7 @@ make_helper(exec) {
 	 //this is the implement of fnction exec(swaddr _t  eip)
 	ops_decoded.opcode = instr_fetch(eip, 1);
     printf("%d\n",opcode_table[ ops_decoded.opcode ](eip));
+	printf("ops_decode.opcode is   %d \n",ops_decoded.opcode);
 	return opcode_table[ ops_decoded.opcode ](eip);
 
 }
