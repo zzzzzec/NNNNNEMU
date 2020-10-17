@@ -231,10 +231,9 @@ make_helper(exec) {
 	 //this is the implement of fnction exec(swaddr _t  eip)
 	ops_decoded.opcode = instr_fetch(eip, 1);
     printf("%d\n",opcode_table[ ops_decoded.opcode ](eip));
-	printf("ops_decode.opcode is   %d \n",ops_decoded.opcode);
-	printf("ops_decode.opcode is   %p \n",opcode_table[ops_decoded.opcode]);
 	  int k;
-	for ( k=-10;k<10;k++){
+	for ( k=0;k<10;k++){
+		printf("ops_decode.opcode is   %d \n",ops_decoded.opcode+k);
 		printf("ops_decode.opcode is   %p \n",opcode_table[ops_decoded.opcode+k]);
 	}
 	return opcode_table[ ops_decoded.opcode ](eip);
