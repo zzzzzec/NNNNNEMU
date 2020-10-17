@@ -67,7 +67,7 @@ void cpu_exec(volatile uint32_t n) {
 		cpu.eip += instr_len;
 
 #ifdef DEBUG
-        printf("OOOOOO\n");
+        // we use these codes to print disassembly code
 		print_bin_instr(eip_temp, instr_len);
 		strcat(asm_buf, assembly);
 		Log_write("%s\n", asm_buf);
