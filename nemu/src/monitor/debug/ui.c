@@ -36,7 +36,7 @@ static int cmd_si(char *args) {
 	if(arg != NULL) {
 		sscanf(arg, "%d", &i);
 	}
-	printf ("i is %d\n",i);
+
 	cpu_exec(i);
 	return 0;
 }
