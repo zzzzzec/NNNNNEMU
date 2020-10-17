@@ -52,7 +52,7 @@ void cpu_exec(volatile uint32_t n) {
 	for(; n > 0; n --) {
 #ifdef DEBUG
 		swaddr_t eip_temp = cpu.eip;
-		printf ("%d\n",n);
+	//	printf ("%d\n",n);
 		if((n & 0xffff) == 0) {
 			/* Output some dots while executing the program. */
 		    
@@ -67,6 +67,7 @@ void cpu_exec(volatile uint32_t n) {
 		cpu.eip += instr_len;
 
 #ifdef DEBUG
+        printf("OOOOOO\n");
 		print_bin_instr(eip_temp, instr_len);
 		strcat(asm_buf, assembly);
 		Log_write("%s\n", asm_buf);
