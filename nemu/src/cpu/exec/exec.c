@@ -152,7 +152,7 @@ helper_fun opcode_table [256] = {
 /* 0xdc */	inv, inv, inv, inv,
 /* 0xe0 */	inv, inv, inv, inv,
 /* 0xe4 */	inv, inv, inv, inv,
-/* 0xe8 */	inv, inv, inv, inv,
+/* 0xe8 */	call_i_v, inv, inv, inv,
 /* 0xec */	inv, inv, inv, inv,
 /* 0xf0 */	inv, inv, inv, inv,
 /* 0xf4 */	inv, inv, group3_b, group3_v,
@@ -230,13 +230,9 @@ helper_fun _2byte_opcode_table [256] = {
 make_helper(exec) {
 	 //this is the implement of fnction exec(swaddr _t  eip)
 	ops_decoded.opcode = instr_fetch(eip, 1);
-    printf("%d\n",opcode_table[ ops_decoded.opcode ](eip));
-	  int k;
-	for ( k=0;k<1;k++){
-		printf("ops_decode.opcode is   %d \n",ops_decoded.opcode+k);
-		printf("ops_decode.opcode is   %p \n",opcode_table[ops_decoded.opcode+k]);
-	}
+    //printf("%d\n",opcode_table[ ops_decoded.opcode ](eip));
 	return opcode_table[ ops_decoded.opcode ](eip);
+	//return mov_i2_v(eip);
 
 }
 
