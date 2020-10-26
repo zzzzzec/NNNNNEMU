@@ -232,7 +232,7 @@ make_helper(exec) {
 	ops_decoded.opcode = instr_fetch(eip, 1);
 	//printf("%d\n",ops_decoded.opcode);
     //printf("%d\n",opcode_table[ ops_decoded.opcode ](eip));
-	printf("EIP is %d\n",cpu.eip);
+	printf("EIP is 0x%08x\n",cpu.eip);
 	return opcode_table[ ops_decoded.opcode ](eip);
 	//return mov_i2_v(eip);
 
