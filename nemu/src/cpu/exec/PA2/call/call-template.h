@@ -10,7 +10,7 @@ make_helper(concat(call_i_, SUFFIX))
     swaddr_write(reg_l(R_ESP), 4, cpu.eip);
     DATA_TYPE_S displacement = op_src->val;
     cpu.eip  = cpu.eip+displacement-1;
-    print_asm("call 0x%08x  %d %d  ", cpu.eip,len,displacement);
+    //print_asm("call 0x%08x  %d %d  ", cpu.eip,len,displacement);
    
     
     return len;
