@@ -15,25 +15,25 @@ static void do_execute()
        print_asm("push $eax ");
        break; 
       case  1:
-       print_asm("push $eax ");
+       print_asm("push $ecx ");
        break; 
           case  2:
-       print_asm("push $eax ");
+       print_asm("push $edx ");
        break; 
           case  3:
-       print_asm("push $eax ");
+       print_asm("push $ebx ");
        break; 
           case  4:
-       print_asm("push $eax ");
+       print_asm("push $esp ");
        break; 
           case  5:
-       print_asm("push $eax ");
+       print_asm("push $ebp ");
        break; 
           case  6:
-       print_asm("push $eax ");
+       print_asm("push $esi ");
        break; 
           case  7:
-       print_asm("push $eax ");
+       print_asm("push $edi ");
        break; 
    default:
        break;
