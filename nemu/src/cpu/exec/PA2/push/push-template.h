@@ -9,6 +9,35 @@ static void do_execute()
     }
     reg_l(R_ESP) -= 4;   /*minus the stack pointer*/ 
     swaddr_write(reg_l(R_ESP), 4, op_src->val);
+   switch (op_src->reg)
+   {
+   case  0:
+       print_asm("push $eax ");
+       break; 
+      case  1:
+       print_asm("push $eax ");
+       break; 
+          case  2:
+       print_asm("push $eax ");
+       break; 
+          case  3:
+       print_asm("push $eax ");
+       break; 
+          case  4:
+       print_asm("push $eax ");
+       break; 
+          case  5:
+       print_asm("push $eax ");
+       break; 
+          case  6:
+       print_asm("push $eax ");
+       break; 
+          case  7:
+       print_asm("push $eax ");
+       break; 
+   default:
+       break;
+   }
 }
 
 make_instr_helper(i)
