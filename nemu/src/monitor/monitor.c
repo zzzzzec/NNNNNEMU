@@ -89,5 +89,6 @@ void restart() {
 
 	/* Initialize DRAM. */
 	init_ddr3();
-	cpu.FLAG.EFLAG = 2;
+	/* initialize  EFLAG*/
+	cpu.FLAG.EFLAG = 2;    
 }
