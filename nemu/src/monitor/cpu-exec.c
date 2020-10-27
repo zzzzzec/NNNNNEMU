@@ -8,7 +8,7 @@
  * This is useful when you use the `si' command.
  * You can modify this value as you want.
  */
-#define MAX_INSTR_TO_PRINT 10
+#define MAX_INSTR_TO_PRINT 100
 
 int nemu_state = STOP;
 
@@ -52,10 +52,8 @@ void cpu_exec(volatile uint32_t n) {
 	for(; n > 0; n --) {
 #ifdef DEBUG
 		swaddr_t eip_temp = cpu.eip;
-		printf ("%d\n",n);
 		if((n & 0xffff) == 0) {
 			/* Output some dots while executing the program. */
-		    printf("HERE\n");
 			fputc('.', stderr);
 		}
 #endif
