@@ -7,6 +7,7 @@
 #include "data-mov/leave.h"
 #include "PA2/call/call.h"
 #include "PA2/push/push.h"
+#include "PA2/test/test.h"
 
 
 #include "arith/dec.h"

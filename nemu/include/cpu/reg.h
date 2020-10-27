@@ -30,7 +30,35 @@ typedef struct {
      };
 
      swaddr_t eip;
-	 swaddr_t EFLAGS;
+	union 
+	{
+		uint32_t EFLAG;
+        struct 
+		{
+			/*#0*/uint32_t CF :1;                               
+			/*#1*/uint32_t       :1;								  
+			/*#2*/uint32_t PF :1;
+			/*#3*/uint32_t       :1;
+			/*#4*/uint32_t AF :1;
+			/*#5*/uint32_t       :1;
+			/*#6*/uint32_t ZF :1;
+			/*#7*/uint32_t SF :1;
+			/*#8*/uint32_t TF :1;
+			/*#9*/uint32_t IF  :1;
+			/*#10*/uint32_t DF :1;
+			/*#11*/uint32_t OF :1;
+			/*#12*/uint32_t OL :1;
+			/*#13*/uint32_t IP  :1;
+			/*#14*/uint32_t NT :1;
+			/*#15*/uint32_t       :1;
+			/*#16*/uint32_t RF:1;
+			/*#17*/uint32_t VM :1;
+			/*#18-23*/uint32_t  :6;
+			/*#24-31*/uint32_t  :8;
+
+		};		
+	}FLAG;
+	 ;
 
 } CPU_state;
 

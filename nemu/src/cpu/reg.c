@@ -50,6 +50,7 @@ void display_reg() {
 	}
 
 	printf("%s\t\t0x%08x\t\t%d\n", "eip", cpu.eip, cpu.eip);
+	printf("%s\t\t0x%08x\t\n", "EFLAG", cpu.FLAG.EFLAG);
 }
 
 /* TODO: Get the value of register */
