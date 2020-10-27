@@ -8,7 +8,7 @@ static void do_execute() {
     {
            cpu.eip = cpu.eip + op_src->val;
     } 
-    print_asm("jump 0x%08x  %d",cpu.eip,op_src->val);
+    print_asm("jump 0x%08x  %d %d",cpu.eip,op_src->val,DATA_BYTE);
 }
 
 make_instr_helper(i);
