@@ -36,7 +36,7 @@ static void do_execute()
     {
         cpu.FLAG.PF = 0;
     }
-    
+    print_asm("test");
 }
 
 make_instr_helper(rm);
