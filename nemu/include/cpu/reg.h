@@ -30,6 +30,7 @@ typedef struct {
      };
 
      swaddr_t eip;
+	 swaddr_t EFLAGS;
 
 } CPU_state;
 
