@@ -3,8 +3,8 @@
 #define instr lea
 
 static void do_execute(){
-    DATA_TYPE_S  addr = op_src->reg;
-    int reg = op_dest ->reg;
+    DATA_TYPE_S  addr = op_dest->val;
+    int reg = op_src ->reg;
     print_asm("%d %d",addr,reg);
 
 
