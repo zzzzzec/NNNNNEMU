@@ -228,14 +228,8 @@ helper_fun _2byte_opcode_table [256] = {
 };
 
 make_helper(exec) {
-	 //this is the implement of fnction exec(swaddr _t  eip)
 	ops_decoded.opcode = instr_fetch(eip, 1);
-	//printf("%d\n",ops_decoded.opcode);
-    //printf("%d\n",opcode_table[ ops_decoded.opcode ](eip));
-	//printf("EIP is 0x%08x\n",cpu.eip);
 	return opcode_table[ ops_decoded.opcode ](eip);
-	//return mov_i2_v(eip);
-
 }
 
 static make_helper(_2byte_esc) {
