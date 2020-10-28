@@ -7,6 +7,7 @@ static void do_execute() {
             int reg = ops_decoded.opcode & 0x7;
             cpu.gpr[reg]._32 = result;
             REG(R_ESP)+=DATA_BYTE;
+            print_asm("pop");
 }
 
 make_instr_helper(r);
