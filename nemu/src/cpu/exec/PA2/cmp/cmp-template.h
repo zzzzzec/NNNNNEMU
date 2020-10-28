@@ -45,7 +45,8 @@ else
      cpu.FLAG.OF = 0;
 }
 cpu.FLAG.SF = (cpu.FLAG.SF) ^ (cpu.FLAG.OF) ;/*adjust sf */
-print_asm_template2();
+//print_asm_template2();
+print_asm("%d",op_src->val);
 }
 
 #if ((DATA_BYTE == 2 || DATA_BYTE == 4))
