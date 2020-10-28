@@ -10,8 +10,6 @@ static void do_execute() {
     } 
     print_asm("jump 0x%08x  %d %d %d",cpu.eip,op_src->val,DATA_BYTE,displacement);
 }
-
 make_instr_helper(i);
-
 
 #include "cpu/exec/template-end.h"
