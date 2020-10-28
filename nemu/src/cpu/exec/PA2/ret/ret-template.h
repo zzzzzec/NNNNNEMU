@@ -4,9 +4,11 @@
 
 make_helper(concat(ret_n_,SUFFIX))
 {
-        cpu.eip = MEM_R(reg_l(R_ESP));
+        /*cpu.eip = MEM_R(reg_l(R_ESP));*/
+         DATA_TYPE result = swaddr_read(cpu.esp,DATA_BYTE);
+         cpu.eip = result;
         reg_l (R_ESP) +=DATA_BYTE;
-        print_asm("ret");
+        print_asm("ret  %d %d",result,DATA_BYTE);
         return 1;
 }
 
