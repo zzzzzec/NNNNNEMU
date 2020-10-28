@@ -9,7 +9,7 @@ make_helper(concat(ret_n_,SUFFIX))
          cpu.eip = result;
         reg_l (R_ESP) +=DATA_BYTE;
         print_asm("ret  0x%x %d",result,DATA_BYTE);
-        return 1;
+        return 0;/*have to minus the length of opcode ret*/ 
 }
 
 #include "cpu/exec/template-end.h"
