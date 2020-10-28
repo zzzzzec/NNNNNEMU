@@ -9,6 +9,9 @@
 #include "PA2/push/push.h"
 #include "PA2/test/test.h"
 #include "PA2/je/je.h"
+#include "PA2/cmp/cmp.h"
+#include "PA2/pop/pop.h"
+#include  "PA2/ret/ret.h"
 
 
 #include "arith/dec.h"
