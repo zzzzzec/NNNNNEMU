@@ -12,6 +12,11 @@
 #include "PA2/cmp/cmp.h"
 #include "PA2/pop/pop.h"
 #include  "PA2/ret/ret.h"
+#include  "PA2/adc/adc.h"
+#include  "PA2/add/add.h"
+#include  "PA2/sbb/sbb.h"
+#include  "PA2/sub/sub.h"
+
 
 
 #include "arith/dec.h"
