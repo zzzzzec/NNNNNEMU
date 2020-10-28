@@ -6,10 +6,10 @@ make_helper(concat(ret_n_,SUFFIX))
 {
         /*cpu.eip = MEM_R(reg_l(R_ESP));*/
          DATA_TYPE result = swaddr_read(cpu.esp,DATA_BYTE);
-         cpu.eip = result;
+         cpu.eip = result-1;/*have to minus the length of opcode ret*/ 
         reg_l (R_ESP) +=DATA_BYTE;
         print_asm("ret  0x%x %d",result,DATA_BYTE);
-        return 0;/*have to minus the length of opcode ret*/ 
+        return 1;
 }
 
 #include "cpu/exec/template-end.h"
