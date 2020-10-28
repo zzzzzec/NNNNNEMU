@@ -5,7 +5,7 @@
 static void do_execute(){
     DATA_TYPE_S  addr = op_dest->val;
     int reg = op_src ->reg;
-    print_asm("%d %d",addr,reg);
+    print_asm("%d %d %d",addr,reg,DATA_BYTE);
 
 
 
