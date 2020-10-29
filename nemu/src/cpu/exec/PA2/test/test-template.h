@@ -26,7 +26,7 @@ static void do_execute()
 int  len = (DATA_BYTE << 3)-1;
  cpu.FLAG.SF = result >> len;
  /*COMMON_SF_FLAG  MODULE  ===== END*/
-    print_asm_template2();
+    print_asm_template1();
 }
 
 make_instr_helper(rm);
