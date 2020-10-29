@@ -29,5 +29,5 @@ int  len = (DATA_BYTE << 3)-1;
     print_asm_template2();
 }
 
-make_instr_helper(rm);
+make_instr_helper(rm2r);
 #include "cpu/exec/template-end.h"
