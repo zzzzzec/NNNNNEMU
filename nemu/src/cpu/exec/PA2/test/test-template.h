@@ -5,7 +5,7 @@ static void do_execute()
 {
     cpu.FLAG.CF =0;
     cpu.FLAG.OF =0;
-    DATA_TYPE  result = (op_src->val & op_src2->val);
+    DATA_TYPE  result = (op_src->val & op_dest->val);
     /*COMMON_ZF_FLAG  MODULE  ===== START*/
 	 if (result == 0 )     cpu.FLAG.ZF =1;
     else                           cpu.FLAG.ZF = 0;
