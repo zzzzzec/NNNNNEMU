@@ -2,9 +2,10 @@
 
 #define instr cmp
 static void do_execute() {
-    int  len = (DATA_BYTE << 3)-1;
+  
      DATA_TYPE result = (op_dest->val) - (op_src->val);
      cpu.FLAG.CF= (op_dest->val) <  (op_src->val);
+    int  len = (DATA_BYTE << 3)-1;
      if (result == 0 )
      {
           cpu.FLAG.ZF =1;
@@ -34,9 +35,9 @@ static void do_execute() {
     {
         cpu.FLAG.PF = 0;
     }
-int s1 = op_src->val;/*set of*/
-int s2 = -(op_dest->val);
-if((s1<0&&s2<0&&(s1+s2)>0)||(s1>0&&s2>0&&(s1+s2)<0))
+DATA_TYPE_S s1 = op_src->val;/*set of*/
+DATA_TYPE_S s2 = op_dest->val;
+if(s1<0&&s2>0&&s1-s2>0)
 {
     cpu.FLAG.OF =1;
 }
@@ -45,8 +46,6 @@ else
      cpu.FLAG.OF = 0;
 }
 cpu.FLAG.SF = (cpu.FLAG.SF) ^ (cpu.FLAG.OF) ;/*adjust sf */
-//print_asm_template2();
-//print_asm("cmp %s,%s",op_dest->str,op_src->str);
 print_asm_template2();
 }
 
