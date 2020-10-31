@@ -16,6 +16,7 @@
 #include  "PA2/add/add.h"
 #include  "PA2/sbb/sbb.h"
 #include  "PA2/sub/sub.h"
+#include "PA2/jmp/jmp.h"
 
 
 
