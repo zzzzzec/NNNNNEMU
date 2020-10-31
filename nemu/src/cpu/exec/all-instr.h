@@ -18,6 +18,7 @@
 #include  "PA2/sub/sub.h"
 #include "PA2/jmp/jmp.h"
 #include "PA2/jle/jle.h"
+#include "PA2/jne/jne.h"
 
 
 
