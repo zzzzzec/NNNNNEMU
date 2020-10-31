@@ -2,7 +2,6 @@
 
 #define instr cmp
 static void do_execute() {
-  
      DATA_TYPE result = (op_dest->val) - (op_src->val);
      cpu.FLAG.CF= (op_dest->val) <  (op_src->val);
     int  len = (DATA_BYTE << 3)-1;
@@ -48,6 +47,7 @@ else
 cpu.FLAG.SF = (cpu.FLAG.SF) ^ (cpu.FLAG.OF) ;/*adjust sf */
 print_asm_template2();
 }
+make_instr_helper(rm2r);
 
 #if ((DATA_BYTE == 2 || DATA_BYTE == 4))
 make_instr_helper(si2rm);
