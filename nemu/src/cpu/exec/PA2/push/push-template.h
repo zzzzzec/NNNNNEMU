@@ -9,7 +9,7 @@ static void do_execute()
     }
     reg_l(R_ESP) -= 4;   /*minus the stack pointer*/ 
     swaddr_write(reg_l(R_ESP), 4, op_src->val);
-   switch (op_src->reg)
+  /* switch (op_src->reg)
    {
    case  0:
        print_asm("push %%eax ");
@@ -37,7 +37,9 @@ static void do_execute()
        break; 
    default:
        break;
-   }
+   }*/
+    
+ print_asm_template1();
 }
 
 make_instr_helper(i)
