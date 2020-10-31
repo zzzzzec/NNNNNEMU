@@ -11,8 +11,8 @@ static void do_execute() {
 	cpu.FLAG.SF=result >> len;
 	s1=op_dest->val>>len;
 	s2=op_src->val>>len;
-    	cpu.FLAG.OF=(s1 == s2 && s1 != cpu.FLAG.SF) ;
-		/*COMMON_ZF_FLAG  MODULE  ===== START*/
+    cpu.FLAG.OF=(s1 == s2 && s1 != cpu.FLAG.SF) ;
+	/*COMMON_ZF_FLAG  MODULE  ===== START*/
 	 if (result == 0 )     cpu.FLAG.ZF =1;
     else                           cpu.FLAG.ZF = 0;
     /*COMMON_ZF_FLAG  MODULE  ===== END*/
