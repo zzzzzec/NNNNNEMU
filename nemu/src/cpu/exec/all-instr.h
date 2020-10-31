@@ -22,6 +22,16 @@
 #include "PA2/jl/jl.h"
 #include "PA2/jg/jg.h"
 #include "PA2/jbe/jbe.h"
+#include "PA2/set/setb/setb.h"
+#include "PA2/set/sete/sete.h"
+#include "PA2/set/setne/setne.h"
+#include "PA2/set/seto/seto.h"
+#include "PA2/set/setp/setp.h"
+#include "PA2/set/sets/sets.h"
+
+
+
+
 
 
 #include "arith/dec.h"
