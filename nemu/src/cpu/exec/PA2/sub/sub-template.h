@@ -4,7 +4,7 @@
 static void do_execute(){
      int  len = (DATA_BYTE << 3)-1;
    DATA_TYPE result = op_dest->val - op_src->val;
-   reg_l(op_dest->reg) = result;
+   OPERAND_W(op_dest,result);
    /*set flag*/
     cpu.FLAG.CF= (op_dest->val) <  (op_src->val);
    if (result == 0)
@@ -49,8 +49,9 @@ else
 cpu.FLAG.SF = (cpu.FLAG.SF) ^ (cpu.FLAG.OF) ;
 print_asm_template2();
 }
-
+make_instr_helper(i2a);
 make_instr_helper(rm2r);
+make_instr_helper(r2rm);
 #if   (DATA_BYTE == 2 || DATA_BYTE ==4)
 make_instr_helper(si2rm);
 #endif
