@@ -15,7 +15,7 @@ make_helper(rep) {
 			exec(eip + 1);
 			count ++;
 			cpu.ecx --;
-			assert(ops_decoded.opcode == 0xa4	// movsb
+			/*assert(ops_decoded.opcode == 0xa4	// movsb
 				|| ops_decoded.opcode == 0xa5	// movsw
 				|| ops_decoded.opcode == 0xaa	// stosb
 				|| ops_decoded.opcode == 0xab	// stosw
@@ -23,44 +23,21 @@ make_helper(rep) {
 				|| ops_decoded.opcode == 0xa7	// cmpsw
 				|| ops_decoded.opcode == 0xae	// scasb
 				|| ops_decoded.opcode == 0xaf	// scasw
-				);
-
+				);*/
+			if ((ops_decoded.opcode == 0xa6	
+				|| ops_decoded.opcode == 0xa7	
+				|| ops_decoded.opcode == 0xae	
+				|| ops_decoded.opcode == 0xaf) && cpu.FLAG.ZF == 0)break;
 			/* TODO: Jump out of the while loop if necessary. */
 
 		}
-		len = 1;
 	}
-
+	len = 1;
+	print_asm ("%s", assembly);
 #ifdef DEBUG
 	char temp[80];
 	sprintf(temp, "rep %s", assembly);
 	sprintf(assembly, "%s[cnt = %d]", temp, count);
 #endif
-	
 	return len + 1;
-}
-
-make_helper(repnz) {
-	int count = 0;
-	while(cpu.ecx) {
-		exec(eip + 1);
-		count ++;
-		cpu.ecx --;
-		assert(ops_decoded.opcode == 0xa6	// cmpsb
-				|| ops_decoded.opcode == 0xa7	// cmpsw
-				|| ops_decoded.opcode == 0xae	// scasb
-				|| ops_decoded.opcode == 0xaf	// scasw
-			  );
-
-		/* TODO: Jump out of the while loop if necessary. */
-
-	}
-
-#ifdef DEBUG
-	char temp[80];
-	sprintf(temp, "repnz %s", assembly);
-	sprintf(assembly, "%s[cnt = %d]", temp, count);
-#endif
-
-	return 1 + 1;
 }
