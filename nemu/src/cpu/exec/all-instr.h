@@ -28,6 +28,9 @@
 #include "PA2/set/seto/seto.h"
 #include "PA2/set/setp/setp.h"
 #include "PA2/set/sets/sets.h"
+#include "PA2/stos/stos.h"
+
+
 
 
 
