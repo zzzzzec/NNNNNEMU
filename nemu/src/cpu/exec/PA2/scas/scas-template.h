@@ -27,7 +27,7 @@ static void do_execute () {
 	result ^= result >>4;
 	result ^= result >>2;
 	result ^= result >>1;
-	cpu.FLAG.PF=!(result & 1);*/
+	cpu.FLAG.PF=!(result & 1);
 	if (cpu.FLAG.DF == 0){
     REG (R_EDI) += DATA_BYTE;
     REG (R_ESI) += DATA_BYTE;
@@ -36,7 +36,7 @@ static void do_execute () {
     REG (R_EDI) -= DATA_BYTE;
     REG (R_ESI) -= DATA_BYTE;
     }
-	print_asm("scas");
+	print_asm("scas");*/
 }
 
 make_instr_helper(n);
