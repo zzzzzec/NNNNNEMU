@@ -16,7 +16,8 @@ static void do_execute () {
 		 dest = swaddr_read (reg_l (R_EDI),DATA_BYTE);
 	}/*dest-src?*/
     DATA_TYPE result;
-    result = src - dest;     
+    result = src - dest;    
+    cpu.FLAG.ZF =1; 
 	/* if (result == 0 )     cpu.FLAG.ZF =1;
     else                           cpu.FLAG.ZF = 0;
 	int len = (DATA_BYTE << 3) - 1;
