@@ -14,7 +14,7 @@ static void do_execute () {
 		src = swaddr_read (reg_l (R_EAX),DATA_BYTE);
 		dest = swaddr_read (reg_l (R_EDI),DATA_BYTE);
 	}/*dest-src?*/
-	/*DATA_TYPE result = src - dest;     
+	DATA_TYPE result = src - dest;     
 	int len = (DATA_BYTE << 3) - 1;
 	cpu.FLAG.CF = dest < src;
 	cpu.FLAG.SF= result >> len;
@@ -34,7 +34,7 @@ static void do_execute () {
 	else {
     REG (R_EDI) -= DATA_BYTE;
     REG (R_ESI) -= DATA_BYTE;
-    }*/
+    }
 	print_asm("scas");
 }
 
