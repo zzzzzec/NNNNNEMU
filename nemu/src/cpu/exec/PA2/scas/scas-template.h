@@ -19,6 +19,7 @@ static void do_execute () {
     result = src - dest;    
 	 if (result == 0 )     cpu.FLAG.ZF =1;
     else                           cpu.FLAG.ZF = 0;
+    print_asm("%d",cpu.FLAG.ZF);
 	int len = (DATA_BYTE << 3) - 1;
 	cpu.FLAG.CF = dest < src;
 	cpu.FLAG.SF= result >> len;
