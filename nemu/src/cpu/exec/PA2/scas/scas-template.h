@@ -19,7 +19,7 @@ static void do_execute () {
     result = src - dest;    
 	 if (result == 0 )     cpu.FLAG.ZF =1;
     else                           cpu.FLAG.ZF = 0;
-	/*int len = (DATA_BYTE << 3) - 1;
+	int len = (DATA_BYTE << 3) - 1;
 	cpu.FLAG.CF = dest < src;
 	cpu.FLAG.SF= result >> len;
     int s1,s2;
@@ -38,7 +38,6 @@ static void do_execute () {
     REG (R_EDI) -= DATA_BYTE;
     REG (R_ESI) -= DATA_BYTE;
     }
-	print_asm("scas");*/
 }
 
 make_instr_helper(n);
