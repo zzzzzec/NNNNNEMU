@@ -23,7 +23,7 @@ static void do_execute() {
     cpu.eip  = cpu.eip+displacement;
     int addr;
     addr = cpu.eip + displacement;
-    print_asm("call %d       %d",addr,DATA_BYTE);
+    print_asm("call %d       %d      %d",addr,DATA_BYTE,displacement);
 }
 
 make_instr_helper(i);
