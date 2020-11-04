@@ -21,7 +21,7 @@ static void do_execute() {
     swaddr_write(reg_l(R_ESP), 4, cpu.eip+len  );
     DATA_TYPE_S displacement = op_src->val;
     cpu.eip  = cpu.eip+displacement;
-    print_asm("call  0x%08x",cpu.eip);
+    print_asm("call  0x%08x",cpu.eip+DATA_BYTE+1);
 }
 
 make_instr_helper(i);
