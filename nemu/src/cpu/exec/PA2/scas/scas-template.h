@@ -16,10 +16,10 @@ static void do_execute () {
 	}/*dest-src?*/
     DATA_TYPE result = src - dest; 
     cpu.FLAG.ZF=!result;    
-	int len = (DATA_BYTE << 3) - 1;
+	/*int len = (DATA_BYTE << 3) - 1;
 	cpu.FLAG.CF = dest < src;
 	cpu.FLAG.SF= result >> len;
-    /*int s1,s2;
+    int s1,s2;
 	s1=dest>>len;
 	s2=src>>len;
     cpu.FLAG.OF=(s1 != s2 && s2 == cpu.FLAG.SF) ;
@@ -27,7 +27,7 @@ static void do_execute () {
 	result ^= result >>4;
 	result ^= result >>2;
 	result ^= result >>1;
-	cpu.FLAG.PF=!(result & 1);
+	cpu.FLAG.PF=!(result & 1);*/
 	if (cpu.FLAG.DF == 0){
     REG (R_EDI) += DATA_BYTE;
     REG (R_ESI) += DATA_BYTE;
@@ -36,7 +36,7 @@ static void do_execute () {
     REG (R_EDI) -= DATA_BYTE;
     REG (R_ESI) -= DATA_BYTE;
     }
-	print_asm("scas");*/
+	print_asm("scas");
 }
 
 make_instr_helper(n);
