@@ -17,9 +17,8 @@ static void do_execute () {
 	}/*dest-src?*/
     DATA_TYPE result;
     result = src - dest;    
-    cpu.FLAG.ZF =1; 
-	/* if (result == 0 )     cpu.FLAG.ZF =1;
-    else                           cpu.FLAG.ZF = 0;
+	 if (result == 0 )     cpu.FLAG.ZF =1;
+   /* else                           cpu.FLAG.ZF = 0;
 	int len = (DATA_BYTE << 3) - 1;
 	cpu.FLAG.CF = dest < src;
 	cpu.FLAG.SF= result >> len;
