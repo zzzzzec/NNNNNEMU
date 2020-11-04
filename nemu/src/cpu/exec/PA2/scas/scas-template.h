@@ -14,7 +14,7 @@ static void do_execute () {
 		src = swaddr_read (reg_l (R_EAX),DATA_BYTE);
 		dest = swaddr_read (reg_l (R_EDI),DATA_BYTE);
 	}/*dest-src?*/
-    /*DATA_TYPE result = src - dest; 
+    int result = src - dest; 
     cpu.FLAG.ZF=!result;    
 	int len = (DATA_BYTE << 3) - 1;
 	cpu.FLAG.CF = dest < src;
@@ -23,7 +23,6 @@ static void do_execute () {
 	s1=dest>>len;
 	s2=src>>len;
     cpu.FLAG.OF=(s1 != s2 && s2 == cpu.FLAG.SF) ;
-    
 	result ^= result >>4;
 	result ^= result >>2;
 	result ^= result >>1;
@@ -36,7 +35,7 @@ static void do_execute () {
     REG (R_EDI) -= DATA_BYTE;
     REG (R_ESI) -= DATA_BYTE;
     }
-	print_asm("scas");*/
+	print_asm("scas");
 }
 
 make_instr_helper(n);
