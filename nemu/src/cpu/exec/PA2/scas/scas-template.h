@@ -15,11 +15,11 @@ static void do_execute () {
 		dest = swaddr_read (reg_l (R_EDI),DATA_BYTE);
 	}/*dest-src?*/
     DATA_TYPE result = src - dest;     
-    	/*COMMON_ZF_FLAG  MODULE  ===== START*/
+    /*COMMON_ZF_FLAG  MODULE  ===== START*/
 	 if (result == 0 )     cpu.FLAG.ZF =1;
     else                           cpu.FLAG.ZF = 0;
     /*COMMON_ZF_FLAG  MODULE  ===== END*/
-	int len = (DATA_BYTE << 3) - 1;
+	/*int len = (DATA_BYTE << 3) - 1;
 	cpu.FLAG.CF = dest < src;
 	cpu.FLAG.SF= result >> len;
     int s1,s2;
@@ -38,7 +38,7 @@ static void do_execute () {
     REG (R_EDI) -= DATA_BYTE;
     REG (R_ESI) -= DATA_BYTE;
     }
-	print_asm("scas");
+	print_asm("scas");*/
 }
 
 make_instr_helper(n);
