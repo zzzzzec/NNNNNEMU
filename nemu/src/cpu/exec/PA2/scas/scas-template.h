@@ -3,16 +3,17 @@
 #define instr scas
 
 static void do_execute () {
-	DATA_TYPE src,dest;
+    DATA_TYPE src;
+    DATA_TYPE dest;
 	if (ops_decoded.is_operand_size_16)
 	{
-		src = swaddr_read (reg_w (R_AL),DATA_BYTE);
-		dest = swaddr_read (reg_w (R_DI),DATA_BYTE);
+		 src = swaddr_read (reg_w (R_AL),DATA_BYTE);
+		 dest = swaddr_read (reg_w (R_DI),DATA_BYTE);
 	}
 	else
 	{
-		src = swaddr_read (reg_l (R_EAX),DATA_BYTE);
-		dest = swaddr_read (reg_l (R_EDI),DATA_BYTE);
+		 src = swaddr_read (reg_l (R_EAX),DATA_BYTE);
+		 dest = swaddr_read (reg_l (R_EDI),DATA_BYTE);
 	}/*dest-src?*/
     DATA_TYPE result = src - dest;     
     /*COMMON_ZF_FLAG  MODULE  ===== START*/
