@@ -15,12 +15,11 @@ static void do_execute () {
 		 src = swaddr_read (reg_l (R_EAX),DATA_BYTE);
 		 dest = swaddr_read (reg_l (R_EDI),DATA_BYTE);
 	}/*dest-src?*/
-    DATA_TYPE result = src - dest;     
-    /*COMMON_ZF_FLAG  MODULE  ===== START*/
-	 if (result == 0 )     cpu.FLAG.ZF =1;
+    DATA_TYPE result;
+    result = src - dest;     
+	/* if (result == 0 )     cpu.FLAG.ZF =1;
     else                           cpu.FLAG.ZF = 0;
-    /*COMMON_ZF_FLAG  MODULE  ===== END*/
-	/*int len = (DATA_BYTE << 3) - 1;
+	int len = (DATA_BYTE << 3) - 1;
 	cpu.FLAG.CF = dest < src;
 	cpu.FLAG.SF= result >> len;
     int s1,s2;
