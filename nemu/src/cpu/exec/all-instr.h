@@ -40,6 +40,7 @@
 #include "PA2/set/sets/sets.h"
 #include "PA2/stos/stos.h"
 #include "PA2/scas/scas.h"
+#include "PA2/movs/movs.h"
 
 
 
