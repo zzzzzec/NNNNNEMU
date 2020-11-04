@@ -14,9 +14,9 @@ static void do_execute () {
 		src = swaddr_read (reg_l (R_EAX),DATA_BYTE);
 		dest = swaddr_read (reg_l (R_EDI),DATA_BYTE);
 	}/*dest-src?*/
-    DATA_TYPE result = src - dest; 
+    /*DATA_TYPE result = src - dest; 
     cpu.FLAG.ZF=!result;    
-	/*int len = (DATA_BYTE << 3) - 1;
+	int len = (DATA_BYTE << 3) - 1;
 	cpu.FLAG.CF = dest < src;
 	cpu.FLAG.SF= result >> len;
     int s1,s2;
